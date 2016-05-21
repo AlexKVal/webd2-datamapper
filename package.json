@@ -14,7 +14,7 @@
     "test-win": "node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.win.js",
     "test": "node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet",
     "tdd": "nodemon -q -x 'node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet'",
-    "start": "set DEBUG=webd2-api:*,jsonApiErrors && node node_modules/nodemon/bin/nodemon --ignore lib/**/*.test.js bin/webd2-server"
+    "start": "set DEBUG=webd2-api:*,jsonApiErrors && node node_modules/nodemon/bin/nodemon --ignore lib/**/*.test.js --ignore lib/**/*.test.win.js bin/webd2-server"
   },
   "engines": {
     "node": "^4.3.1"
@@ -33,7 +33,6 @@
   },
   "homepage": "https://github.com/alexkval/webd2-api#readme",
   "devDependencies": {
-    "blue-tape": "^0.2.0",
     "faucet": "0.0.1",
     "nodemon": "^1.9.0",
     "standard": "^6.0.7",
