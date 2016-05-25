@@ -2,6 +2,8 @@
 
 WIP: json api server for the webd2
 
+- No active record pattern, just plain data objects.
+
 ## TDD
 
 ```
@@ -16,7 +18,7 @@ For auto rebuilding and restarting server use
 
 #### Development on unix + windows
 
-`npm run watch` on unix
+`npm run tdd` on unix
 
 `npm run win` on windows
 
@@ -24,9 +26,6 @@ For auto rebuilding and restarting server use
 
 Set env variable `D2ALIAS` to odbc alias configured to the main database
 
-#### TODO
-
-- cors should be configurable
 
 ## License
 It is licensed under the [MIT License](https://github.com/alexkval/webd2-api/blob/master/LICENSE).
