@@ -48,6 +48,7 @@
     "jsonapi-serializer": "3.1.0",
     "jsonwebtoken": "^5.7.0",
     "lodash": "^4.6.1",
+    "moment": "^2.13.0",
     "morgan": "~1.6.1",
     "pluralize": "^1.2.1",
     "webd2-db": "^0.1.0"
