@@ -8,9 +8,10 @@
     "lib"
   ],
   "scripts": {
+    "release": "release",
     "lint": "standard",
     "test-win": "set DEBUG=webd2-datamapper:* && node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.win.js",
-    "test": "node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet",
+    "test": "npm run lint && node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet",
     "tdd": "nodemon -q -x 'node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet'"
   },
   "engines": {
@@ -31,7 +32,9 @@
   "homepage": "https://github.com/alexkval/webd2-datamapper#readme",
   "devDependencies": {
     "faucet": "0.0.1",
+    "mt-changelog": "^0.6.2",
     "nodemon": "^1.9.0",
+    "release-script": "^1.0.2",
     "standard": "^6.0.7",
     "tape": "^4.5.1"
   },
