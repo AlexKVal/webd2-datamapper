@@ -1,6 +1,6 @@
-# webd2-api
+# webd2-datamapper
 
-WIP: json api server for the webd2
+WIP: data persistence for the webd2
 
 - No active record pattern, just plain data objects.
 
@@ -8,12 +8,6 @@ WIP: json api server for the webd2
 
 ```
 > npm run tdd
-```
-
-For auto rebuilding and restarting server use
-
-```
-> npm start
 ```
 
 #### Development on unix + windows
@@ -28,4 +22,4 @@ Set env variable `D2ALIAS` to odbc alias configured to the main database
 
 
 ## License
-It is licensed under the [MIT License](https://github.com/alexkval/webd2-api/blob/master/LICENSE).
+It is licensed under the [MIT License](https://github.com/alexkval/webd2-datamapper/blob/master/LICENSE).

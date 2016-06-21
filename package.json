@@ -1,27 +1,24 @@
 {
-  "name": "webd2-api",
-  "version": "0.0.2",
-  "description": "json api server for the webd2",
-  "bin": "bin/webd2-server",
+  "name": "webd2-datamapper",
+  "version": "0.1.0",
+  "description": "data persistence for the webd2",
   "files": [
     "LICENSE",
     "README.md",
-    "lib",
-    "bin"
+    "lib"
   ],
   "scripts": {
     "lint": "standard",
-    "test-win": "set DEBUG=webd2-api:* && node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.win.js",
-    "test": "node --harmony_destructuring node_modules/tape/bin/tape lib/*.test.js lib/**/*.test.js | faucet",
-    "tdd": "nodemon -q -x 'node --harmony_destructuring node_modules/tape/bin/tape lib/*.test.js lib/**/*.test.js | faucet'",
-    "start": "set DEBUG=webd2-api:*,jsonApiErrors && node node_modules/nodemon/bin/nodemon --ignore  lib/**/*.test.js --ignore lib/**/*.test.win.js --ignore lib/*.test.js bin/webd2-server"
+    "test-win": "set DEBUG=webd2-datamapper:* && node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.win.js",
+    "test": "node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet",
+    "tdd": "nodemon -q -x 'node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet'"
   },
   "engines": {
     "node": "^4.3.1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alexkval/webd2-api.git"
+    "url": "git@github.com:alexkval/webd2-datamapper.git"
   },
   "author": {
     "name": "Alexander Shemetovsky",
@@ -29,9 +26,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexkval/webd2-api/issues"
+    "url": "https://github.com/alexkval/webd2-datamapper/issues"
   },
-  "homepage": "https://github.com/alexkval/webd2-api#readme",
+  "homepage": "https://github.com/alexkval/webd2-datamapper#readme",
   "devDependencies": {
     "faucet": "0.0.1",
     "nodemon": "^1.9.0",
@@ -39,18 +36,9 @@
     "tape": "^4.5.1"
   },
   "dependencies": {
-    "body-parser": "~1.13.2",
-    "cors": "^2.7.1",
     "debug": "~2.2.0",
     "error-class": "^2.0.0",
-    "express": "~4.13.1",
-    "jsonapi-errors": "^0.1.2",
-    "jsonapi-serializer": "3.1.0",
-    "jsonwebtoken": "^5.7.0",
     "lodash": "^4.6.1",
-    "moment": "^2.13.0",
-    "morgan": "~1.6.1",
-    "pluralize": "^1.2.1",
-    "webd2-db": "^0.1.0"
+    "moment": "^2.13.0"
   }
 }
