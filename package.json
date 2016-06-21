@@ -1,6 +1,6 @@
 {
   "name": "webd2-datamapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "data persistence for the webd2",
   "files": [
     "LICENSE",
