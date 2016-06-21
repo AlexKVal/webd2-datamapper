@@ -1,0 +1,55 @@
+{
+  "name": "webd2-api",
+  "version": "0.0.2",
+  "description": "json api server for the webd2",
+  "bin": "bin/webd2-server",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib",
+    "bin"
+  ],
+  "scripts": {
+    "lint": "standard",
+    "test-win": "node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.win.js",
+    "test": "node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet",
+    "tdd": "nodemon -q -x 'node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet'",
+    "start": "set DEBUG=webd2-api:*,jsonApiErrors && node node_modules/nodemon/bin/nodemon --ignore lib/**/*.test.js bin/webd2-server"
+  },
+  "engines": {
+    "node": "^4.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alexkval/webd2-api.git"
+  },
+  "author": {
+    "name": "Alexander Shemetovsky",
+    "email": "alexkval@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexkval/webd2-api/issues"
+  },
+  "homepage": "https://github.com/alexkval/webd2-api#readme",
+  "devDependencies": {
+    "blue-tape": "^0.2.0",
+    "faucet": "0.0.1",
+    "nodemon": "^1.9.0",
+    "standard": "^6.0.7",
+    "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cors": "^2.7.1",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jsonapi-errors": "^0.1.2",
+    "jsonapi-serializer": "3.1.0",
+    "jsonwebtoken": "^5.7.0",
+    "lodash": "^4.6.1",
+    "morgan": "~1.6.1",
+    "pluralize": "^1.2.1",
+    "webd2-db": "^0.1.0"
+  }
+}
