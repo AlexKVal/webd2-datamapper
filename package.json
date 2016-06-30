@@ -10,9 +10,10 @@
   "scripts": {
     "release": "release",
     "lint": "standard",
+    "test-unix": "node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet",
     "test-win": "set DEBUG=webd2-datamapper:* && node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.win.js",
-    "test": "npm run lint && node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet",
-    "tdd": "nodemon -q -x 'node --harmony_destructuring node_modules/tape/bin/tape lib/**/*.test.js | faucet'"
+    "test": "npm run lint && npm run test-unix",
+    "tdd": "nodemon -q -x 'npm run test-unix'"
   },
   "engines": {
     "node": "^4.3.1"
@@ -33,7 +34,6 @@
   "devDependencies": {
     "faucet": "0.0.1",
     "mt-changelog": "^0.6.2",
-    "nodemon": "^1.9.0",
     "release-script": "^1.0.2",
     "standard": "^6.0.7",
     "tape": "^4.5.1"
