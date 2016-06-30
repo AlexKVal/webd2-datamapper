@@ -34,6 +34,7 @@
   "devDependencies": {
     "faucet": "0.0.1",
     "mt-changelog": "^0.6.2",
+    "nodemon": "^1.9.2",
     "release-script": "^1.0.2",
     "standard": "^6.0.7",
     "tape": "^4.5.1"
